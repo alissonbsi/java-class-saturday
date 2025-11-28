@@ -1,3 +1,5 @@
+package br.com.estudo;
+
 import java.util.Scanner;
 
 public class LeituraDados {
