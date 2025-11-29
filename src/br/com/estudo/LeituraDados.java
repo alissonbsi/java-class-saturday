@@ -20,6 +20,7 @@ public class LeituraDados {
         Scanner leitor = new Scanner(System.in); //nova instância de Scanner
 
 //        ESCREVA("Digite o seu nome: ")
+        // LEIA(variavel)
         System.out.println("Digite o seu nome: ");
         String meuNome = leitor.nextLine();
 
