@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class UsuarioLogin {
     public static void main(String[] args) {
-        LoginApp();
+        loginApp();
     }
-    private static void LoginApp(){
+    private static void loginApp(){
         Scanner leitor = new Scanner(System.in);
 
         System.out.println("Enter Name: ");
