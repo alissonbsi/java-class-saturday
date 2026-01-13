@@ -1,4 +1,4 @@
-package br.com.estudo.Gerson;
+package br.com.estudo.exercicio.Gerson;
 
 import java.util.Scanner;
 

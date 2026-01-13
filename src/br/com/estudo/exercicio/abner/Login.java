@@ -1,4 +1,4 @@
-package br.com.estudo.abner;
+package br.com.estudo.exercicio.abner;
 
 import java.util.Scanner;
 
