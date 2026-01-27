@@ -1,4 +1,4 @@
-package br.com.estudo.jeanderson;
+package br.com.estudo.exercicio.jeanderson;
 
 import java.util.Scanner;
 
