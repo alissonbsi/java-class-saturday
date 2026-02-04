@@ -11,7 +11,6 @@ public class SwitchCase {
 
         System.out.println("Digite a letra da sigla que você se identifica: ");
         lgbtqiapn = leitor.nextLine();
-
         switch (lgbtqiapn) {
             case "L":
                 System.out.println("Você é chupa charque!");
