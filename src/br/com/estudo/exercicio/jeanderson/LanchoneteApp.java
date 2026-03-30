@@ -11,14 +11,14 @@ public class LanchoneteApp {
         boolean descontoAplicado = false;
         String sentinela;
         int escolha;
-        boolean funcionando = true;
+        boolean start = true;
         Scanner sc = new Scanner(System.in);
 
         ArrayList<String> cardapio = new ArrayList<>();
         ArrayList<Double> precos = new ArrayList<>();
         inicializarItensBasicos(cardapio, precos);
 
-        while (funcionando) {
+        while (start) {
             imprimirEscolhas();
             escolha = (sc.hasNextInt()) ? sc.nextInt() : testarInteiro(sc);
             sentinela = "0";
@@ -35,8 +35,8 @@ public class LanchoneteApp {
                     break;
 
                 case (2):
-                    descontoAplicado = false;
                     total = encerrarPedido(total, desconto);
+                    descontoAplicado = false;
                     desconto = 0;
                     break;
 
@@ -68,7 +68,7 @@ public class LanchoneteApp {
                     break;
 
                 case (6):
-                    funcionando = false;
+                    start = false;
                     break;
 
                 default:
