@@ -51,7 +51,8 @@ public class ListaPratica {
         System.out.print("Quantos números deseja digitar? ");
         int n = sc.nextInt();
 
-        int pares = 0, impares = 0;
+        int pares = 0;
+        int impares = 0;
 
         for (int i = 0; i < n; i++) {
             System.out.print("Digite um número: ");
@@ -66,18 +67,20 @@ public class ListaPratica {
     }
 
     public static void positivoNegativo(Scanner sc) {
-        int num, total = 0;
+        int num = 0;
+        int total = 0;
 
-        while (true) {
-            System.out.print("Digite um número (0 para sair): ");
-            num = sc.nextInt();
+        System.out.print("Digite um número (0 para sair): ");
+        num = sc.nextInt();
 
-            if (num == 0) break;
-
+        while (num != 0) {
             String resultado = (num > 0) ? "Positivo" : "Negativo";
             System.out.println(resultado);
 
             total++;
+
+            System.out.print("Digite um número (0 para sair): ");
+            num = sc.nextInt();
         }
         System.out.println("Total de números digitados: " + total);
     }
