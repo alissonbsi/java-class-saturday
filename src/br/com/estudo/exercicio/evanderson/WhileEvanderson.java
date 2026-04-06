@@ -3,92 +3,91 @@ package br.com.estudo.exercicio.evanderson;
 import java.util.Scanner;
 
 public class WhileEvanderson {
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-    // QUESTÃO 1 - Validação de senha
-    String senha;
+        // QUESTÃO 1 - Validação de senha
+        String senha;
 
-    System.out.println("Digite a senha:");
-    senha = scanner.nextLine();
-
-    while (senha.compareTo("java123") != 0) {
-        System.out.println("Senha incorreta. Digite novamente:");
+        System.out.println("Digite a senha:");
         senha = scanner.nextLine();
-    }
 
-    System.out.println("Acesso permitido!");
+        while (senha.compareTo("java123") != 0) {
+            System.out.println("Senha incorreta. Digite novamente:");
+            senha = scanner.nextLine();
+        }
 
-    // QUESTÃO 2 - Soma até número negativo
-    int numero = 0;
-    int soma = 0;
+        System.out.println("Acesso permitido!");
 
-    System.out.println("Digite números positivos (negativo encerra):");
-    numero = scanner.nextInt();
+        // QUESTÃO 2 - Soma até número negativo
+        int numero = 0;
+        int soma = 0;
 
-    while (numero >= 0) {
-        soma += numero;
+        System.out.println("Digite números positivos (negativo encerra):");
         numero = scanner.nextInt();
-    }
 
-    System.out.println("Soma total: " + soma);
+        while (numero >= 0) {
+            soma += numero;
+            numero = scanner.nextInt();
+        }
 
-    // QUESTÃO 3 - Menu
-    int opcao = 0;
+        System.out.println("Soma total: " + soma);
 
-    while (opcao != 3) {
+        // QUESTÃO 3 - Menu
+        int opcao = 0;
 
-        System.out.println("\n1 - Par");
-        System.out.println("2 - Ímpar");
-        System.out.println("3 - Sair");
+        while (opcao != 3) {
 
-        opcao = scanner.nextInt();
+            System.out.println("\n1 - Par");
+            System.out.println("2 - Ímpar");
+            System.out.println("3 - Sair");
 
-        if (opcao == 1 || opcao == 2) {
+            opcao = scanner.nextInt();
 
-            System.out.println("Digite um número:");
-            int n = scanner.nextInt();
+            if (opcao == 1 || opcao == 2) {
 
-            if (n % 2 == 0) {
-                System.out.println("Número é PAR");
-            } else {
-                System.out.println("Número é ÍMPAR");
+                System.out.println("Digite um número:");
+                int n = scanner.nextInt();
+
+                if (n % 2 == 0) {
+                    System.out.println("Número é PAR");
+                } else {
+                    System.out.println("Número é ÍMPAR");
+                }
+
+            } else if (opcao != 3) {
+                System.out.println("Opção inválida");
+            }
+        }
+
+        // QUESTÃO 4 - Login com tentativas
+        String usuario;
+        String senhaLogin;
+
+        int tentativas = 0;
+
+        while (tentativas < 3) {
+
+            System.out.println("Usuário:");
+            usuario = scanner.next();
+
+            System.out.println("Senha:");
+            senhaLogin = scanner.next();
+
+            if (usuario.compareTo("admin") == 0 && senhaLogin.compareTo("1234") == 0) {
+                System.out.println("Login realizado com sucesso");
+                break;
             }
 
-        } else if (opcao != 3) {
-            System.out.println("Opção inválida");
+            tentativas++;
+
+            if (tentativas == 3) {
+                System.out.println("Conta bloqueada");
+            } else {
+                System.out.println("Dados incorretos. Tentativas restantes: " + (3 - tentativas));
+            }
         }
+        scanner.close();
     }
-
-    // QUESTÃO 4 - Login com tentativas
-    String usuario;
-    String senhaLogin;
-
-    int tentativas = 0;
-
-    while (tentativas < 3) {
-
-        System.out.println("Usuário:");
-        usuario = scanner.next();
-
-        System.out.println("Senha:");
-        senhaLogin = scanner.next();
-
-        if (usuario.compareTo("admin") == 0 && senhaLogin.compareTo("1234") == 0) {
-            System.out.println("Login realizado com sucesso");
-            break;
-        }
-
-        tentativas++;
-
-        if (tentativas == 3) {
-            System.out.println("Conta bloqueada");
-        } else {
-            System.out.println("Dados incorretos. Tentativas restantes: " + (3 - tentativas));
-        }
-    }
-
-    scanner.close();
-}
 }

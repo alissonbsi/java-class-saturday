@@ -6,7 +6,7 @@ public class ExercicioJava {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println(" 1. Classificr Idade ");
+        System.out.println(" 1. Classificar Idade ");
         System.out.print("Digite sua idade: ");
         int idade = leitor.nextInt();
 
@@ -19,9 +19,10 @@ public class ExercicioJava {
         }
 
         System.out.println("\n 2.  Par e Ímpar ");
-        System.out.print("Quantos números quer ler? ");
+        System.out.print("Quantos números quer ler?");
         int n = leitor.nextInt();
-        int pares = 0, impares = 0;
+        int pares = 0;
+        int impares = 0;
 
         for (int i = 0; i < n; i++) {
             System.out.print("Digite um número: ");
@@ -33,13 +34,15 @@ public class ExercicioJava {
 
         System.out.println("\n 3. Positivo ou Negativo (0 para sair) ");
         int total = 0;
-        while (true) {
-            int num = leitor.nextInt();
-            if (num == 0) break;
-
+        System.out.println("Digite um número:");
+        int num = leitor.nextInt();
+        while (num != 0) {
             String tipo = (num > 0) ? "Positivo" : "Negativo";
             System.out.println(tipo);
             total++;
+
+            System.out.println("Digite um número:");
+            num = leitor.nextInt();
         }
         System.out.println("Total digitado: " + total);
 
@@ -56,7 +59,7 @@ public class ExercicioJava {
             soma += lista[i];
         }
 
-        double maior = lista[0];
+        double maior = 0;
         System.out.print("Valores: ");
         for (double v : lista) {
             System.out.print(v + " ");
